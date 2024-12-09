@@ -1,0 +1,831 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: valorant;
+  src: url(../font/Valorant\ Font.ttf);
+}
+@font-face {
+  font-family: larke-neue;
+  src: url(../font/Larke\ Neue\ Bold.ttf);
+}
+@font-face {
+  font-family: larke-neue-thin;
+  src: url(../font/Larke\ Neue\ Thin.ttf);
+}
+
+body {
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* Background Video */
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  width: 30px;
+}
+
+/* play now button */
+.btn-danger {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 5px;
+  background-color: #ff4655;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger a {
+  text-decoration: none;
+  color: white;
+}
+
+/* play now button hover */
+.btn-danger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* buat gap antara nav words */
+.link-container {
+  gap: 2rem;
+  display: flex;
+}
+
+/* Nav link hover efek keren gitu */
+.link-container a {
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease;
+  font-family: Anton, serif;
+}
+
+.link-container a:hover {
+  color: white;
+}
+
+.link-container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+/* video top section */
+#video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* buat bideo Styling */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Centered Text */
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.centered-text h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: valorant;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 2);
+}
+
+.centered-text h2 {
+  font-weight: 100;
+  font-size: 1vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 2);
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: Anton, sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-text {
+  font-family: "Halant", serif;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: left !important;
+  padding-left: 200px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: auto;
+}
+
+.about-image2 {
+  position: relative;
+}
+
+.about-image2 img {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: auto;
+  margin-right: -50px;
+}
+
+.about-image3 {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.about-image3 img {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: auto;
+  margin-right: -50px;
+}
+
+.about-section3 {
+  margin-bottom: 50px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.overlay-text h2 {
+  font-size: 4vw;
+  font-family: valorant;
+  color: white;
+  text-shadow: -0.7px -0.7px 0 grey, 0.7px -0.7px 0 grey, -0.7px 0.7px 0 grey, 0.7px 0.7px 0 grey;
+  margin: 0;
+  position: relative; /* biar bisa overlay, penting jangan remove*/
+  z-index: -1; /* biar text di blkg image */
+  margin-bottom: 10px;
+}
+
+.about-image,
+.about-image2,
+.about-image3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: Anton, sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/*overlay text top text*/
+.ottt {
+  color: #ff0000 !important;
+}
+
+.ottt2 {
+  color: #333 !important;
+}
+
+.section-text {
+  font-family: larke-neue;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin-left: 20px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.section-title2 {
+  font-family: Anton, sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.text-white {
+  color: white;
+}
+
+#agents {
+  background-color: #ff4655;
+}
+
+.section-text2 {
+  font-family: larke-neue;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin-right: 190px;
+  line-height: 1.6;
+  flex: 1;
+  text-align: right;
+}
+
+/*Maps Section*/
+.maps-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video Styling Maps Section*/
+.maps-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* centre text map video section */
+.maps-centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.maps-centered-text h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: valorant;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 2);
+}
+
+.maps-centered-text h2 {
+  font-weight: 100;
+  font-size: 1vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 2);
+}
+
+/* Agents and Weapons Buttons */
+.agents-button,
+.weapons-button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.agents-button {
+  background-color: #0f1923;
+}
+
+.agents-button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.weapons-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: #0f1923;
+  transition: 0.2s;
+}
+
+/* Maps Section Button */
+.maps-button {
+  display: block;
+  font-family: larke-neue;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 80px;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.maps-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: #0f1923;
+  transition: 0.2s;
+}
+
+/* Sharp Edges */
+.agents-button,
+.weapons-button,
+.maps-button {
+  position: relative;
+  text-decoration: none;
+  font-family: larke-neue;
+}
+
+.agents-button:before,
+.weapons-button:before,
+.maps-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.agents-button:hover:before,
+.weapons-button:hover:before,
+.maps-button:hover:before {
+  transform: scaleX(1);
+}
+
+.agents-button:after,
+.weapons-button:after,
+.maps-button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.agents-button:hover:after,
+.weapons-button:hover:after,
+.maps-button:hover:after {
+  transform: scaleX(1);
+}
+
+/* ensure that any decorative elements or effects that are added before or after the button text align properly with the button itself./biar dekornya/efekny"nya yg ditambah sebelum ato sesudah bisa nge align dgn buttonnya*/
+.agents-button:before,
+.agents-button:after,
+.weapons-button:before,
+.weapons-button:after,
+.maps-button:before,
+.maps-button:after {
+  left: 0;
+}
+
+/*t&s section*/
+
+.cntr-img {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.cntr-img:hover {
+  transform: scale(1.2);
+}
+
+.tips-strategies-section {
+  background-color: rgba(255, 255, 255, 0.891);
+  padding: 40px 10px;
+  width: 100%;
+  height: auto;
+  padding-top: 200px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tns-title {
+  color: #333333;
+  font-size: 65px;
+}
+
+.subtitle-tns {
+  font-weight: 100;
+  text-align: center;
+  font-family: larke-neue-thin;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.left-texts,
+.right-texts {
+  max-width: 200px;
+  width: 100%;
+}
+
+.tip-icon {
+  width: 30px;
+  height: auto;
+  margin-bottom: 0 auto 5px;
+  display: block;
+}
+
+.tip-icon-vandal {
+  width: 70px;
+  height: auto;
+}
+
+.tip-icon-gs {
+  width: 55px;
+  height: auto;
+}
+
+.tip-icon-ma {
+  width: 55px;
+  height: auto;
+}
+
+.tip-icon-movement {
+  width: 45px;
+  height: auto;
+}
+
+.p-tns {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: larke-neue;
+  color: #333333;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.4s ease;
+  margin-bottom: -2px;
+}
+
+.p-tns:hover {
+  border-bottom: 2px solid #333333;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.tip-top {
+  margin-bottom: 120px;
+}
+
+.center-image img {
+  height: 50vh;
+  width: auto;
+}
+
+.sect-title-link {
+  text-decoration: none;
+}
+
+/*rating section*/
+.rating-section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.rating-section .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rating-section h2,
+.rating-section h3,
+.rating-section p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .rating-section h3 {
+    font-size: 1.2em;
+  }
+
+  .rating-section p {
+    font-size: 0.9em;
+  }
+}
+
+.section-title-ratings {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.rating-section h3 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+}
+
+.shadow-text {
+  text-shadow: 8px 4px rgba(0, 0, 0, 1) !important;
+}
+
+.rating-bt {
+  font-size: 20px;
+}
+
+.rating-tt {
+  color: white;
+  text-decoration: none;
+  font-family: larke-neue;
+}
+
+/* download button section*/
+.download-button-section {
+  padding: 40px 0;
+  transform: translateY(-120%);
+  text-align: center;
+  width: 100%;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px 80px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  transform: scale(1);
+  transition: 0.3s;
+  font-family: larke-neue;
+}
+
+.cta-button:hover {
+  background-color: #ff4655;
+  color: white;
+  transform: scale(1.1);
+}
+
+/*footer section*/
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.logo-section {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+  margin: 10px;
+}
+
+.social-media {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  max-width: 30px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.policy-links {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  margin-bottom: 20px;
+}
+
+/* buat responsive*/
+
+@media (max-width: 768px) {
+  .tips-strategies-section,
+  .rating-section {
+    padding: 20px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  #video-container {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+/* Mobile styles for the text in video section */
+@media (max-width: 768px) {
+  .centered-text h1 {
+    font-size: 10vw !important;
+  }
+
+  .centered-text h2 {
+    font-size: 3vw !important;
+  }
+
+  #video-section {
+    height: 100vh !important;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-centered-text h1 {
+    font-size: 10vw !important;
+  }
+
+  .maps-centered-text h2 {
+    font-size: 4vw !important;
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  /* About Section */
+  .about-section .section-text {
+    font-size: 0.6rem !important;
+    margin: 0;
+    padding: 0;
+  }
+  .about-section .about-image img {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Agents Section */
+  .about-section .section-text2 {
+    font-size: 0.6rem !important;
+    margin: 0;
+    padding: 0;
+  }
+  .about-section .about-image2 img {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Weapons Section */
+  .about-section .about-image3 img {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Adjustments for mobile devices for overlay text */
+@media (max-width: 768px) {
+  /* About Section Overlay Text */
+  .about-section .overlay-text h2 {
+    font-size: 2rem;
+  }
+
+  /* Agents Section Overlay Text */
+  .agents-section .overlay-text h2 {
+    font-size: 2rem;
+  }
+
+  /* Weapons Section Overlay Text */
+  .weapons-section .overlay-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* About Section */
+  .about-section {
+    height: 100vh;
+    background-color: white;
+  }
+}

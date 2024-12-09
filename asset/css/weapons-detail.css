@@ -1,0 +1,214 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  width: 30px;
+}
+
+@font-face {
+  font-family: larke-neue;
+  src: url(../font/Larke\ Neue\ Bold.ttf);
+}
+
+/* play now button */
+.btn-danger {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger a {
+  text-decoration: none;
+  color: white;
+}
+
+/* play now button hover */
+.btn-danger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* buat gap antara nav words */
+.link-container {
+  gap: 2rem;
+  display: flex;
+}
+
+/* Nav link hover efek keren gitu */
+.link-container a {
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease;
+}
+
+.link-container a:hover {
+  color: white;
+}
+
+.link-container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Weapon Details Page Layout */
+.weapon-details-page {
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.weapon-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weapon-header h1 {
+  font-size: 2.5rem;
+  color: #ff4655; /* Valorant red */
+}
+
+.weapon-tagline {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.weapon-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.weapon-ingame,
+.weapon-realworld {
+  width: 48%;
+  background-color: #2e2e2e;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.weapon-ingame h2,
+.weapon-realworld h2 {
+  color: #ff4655;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.weapon-image {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.weapon-stats,
+.real-weapon-stats {
+  list-style: none;
+  padding: 0;
+}
+
+.weapon-stats li,
+.real-weapon-stats li {
+  margin-bottom: 10px;
+}
+
+.weapon-footer {
+  text-align: center;
+  margin: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff4655;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #d63c4b;
+}
+
+.footer {
+  background-color: #222; /* Dark background color for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center-align text */
+}
+
+.footer a {
+  color: #fff; /* White links */
+  margin: 0 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.logo-section {
+  margin-bottom: 20px; /* Space below the logo section */
+}
+
+.footer-logo {
+  max-width: 150px; /* Set a max width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space around the logos */
+}
+
+.social-media {
+  margin-bottom: 20px; /* Space below the social media icons */
+}
+
+.social-icon {
+  max-width: 30px; /* Set a max width for social media icons */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between icons */
+}
+
+.footer-links {
+  margin-bottom: 20px; /* Space below the footer links */
+}
+
+.contact-info {
+  margin-bottom: 20px; /* Space below the contact info */
+}
+
+.policy-links {
+  margin-bottom: 20px; /* Space below the policy links */
+}
+
+.copyright {
+  margin-bottom: 20px; /* Space below the copyright notice */
+}

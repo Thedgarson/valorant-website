@@ -1,0 +1,510 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  width: 30px;
+}
+
+@font-face {
+  font-family: larke-neue;
+  src: url(/asset/font/Larke\ Neue\ Bold.ttf);
+}
+
+@font-face {
+  font-family: larke-neue-reguler;
+  src: url(/asset/font/Larke\ Neue\ Regular.ttf);
+}
+
+/* play now button */
+.btn-danger {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger a {
+  text-decoration: none;
+  color: white;
+}
+
+/* play now button hover */
+.btn-danger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* buat gap antara nav words */
+.link-container {
+  gap: 2rem;
+  display: flex;
+}
+
+/* Nav link hover efek keren gitu */
+.link-container a {
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease;
+}
+
+.link-container a:hover {
+  color: white;
+}
+
+.link-container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+.weapons-page {
+  margin-top: 50px;
+  background-image: url(/asset/images/bg-weapons-image.jpg);
+  width: 100vw;
+  height: 100vh;
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.weapons-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+
+/* Agent Section */
+.agent-info {
+  width: 20%;
+}
+
+.agent {
+  text-align: center;
+  background-color: #2e2e2e;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.agent-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.agent-name {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.agent {
+  background-image: url(/asset/images/Iso-shadow.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s;
+}
+
+.agent:hover {
+  background-image: url(/asset/images/Iso.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.agent p {
+  color: #fff;
+}
+
+/* Weapons Grid */
+.weapons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 75%;
+}
+
+.category {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: rgba(46, 46, 46, 0.5);
+}
+
+.category h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff4655; /* Valorant red */
+  font-family: larke-neue-reguler;
+}
+
+.weapon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #3e3e3e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* pistols */
+
+.classic {
+  background-image: url(/asset/images/Classic-shadow.png);
+  transition: 0.4s;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.classic:hover {
+  background-image: url(/asset/images/Classic.webp);
+}
+
+.shorty {
+  background-image: url(/asset/images/Shorty-shadow.png);
+  transition: 0.4s;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.shorty:hover {
+  background-image: url(/asset/images/Shorty.webp);
+}
+
+.frenzy {
+  background-image: url(/asset/images/frenzy-shadow.png);
+  transition: 0.4s;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.frenzy:hover {
+  background-image: url(/asset/images/Frenzy.webp);
+}
+
+.ghost {
+  background-image: url(/asset/images/Ghost-shadow.png);
+  transition: 0.4s;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.ghost:hover {
+  background-image: url(/asset/images/Ghost.webp);
+}
+
+.sheriff {
+  background-image: url(/asset/images/Sheriff-shadow.png);
+  transition: 0.4s;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.sheriff:hover {
+  background-image: url(/asset/images/Sheriff.webp);
+}
+
+/* SMGs */
+.stinger {
+  background-image: url(/asset/images/Stinger-shadow.png);
+  transition: 0.4s;
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.stinger:hover {
+  background-image: url(/asset/images/Stinger.webp);
+}
+
+.spectre {
+  background-image: url(/asset/images/Spectre-shadow.png);
+  transition: 0.4s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.spectre:hover {
+  background-image: url(/asset/images/Spectre.png);
+}
+
+/* Rifles */
+.bulldog {
+  background-image: url(/asset/images/Bulldog-shadow.png);
+  transition: 0.4s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.bulldog:hover {
+  background-image: url(/asset/images/Bulldog.webp);
+}
+
+.guardian {
+  background-image: url(/asset/images/Guardian-shadow.png);
+  transition: 0.4s;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.guardian:hover {
+  background-image: url(/asset/images/Guardian.png);
+}
+
+.phantom {
+  background-image: url(/asset/images/Phantom-shadow.png);
+  transition: 0.4s;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.phantom:hover {
+  background-image: url(/asset/images/Phantom.png);
+}
+
+.vandal {
+  background-image: url(/asset/images/vandal-shadow-weapons.png);
+  transition: 0.4s;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.vandal:hover {
+  background-image: url(/asset/images/Vandal.png);
+}
+
+/* Snipers */
+.marshal {
+  background-image: url(/asset/images/Marshal-shadow.png);
+  transition: 0.4s;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.marshal:hover {
+  background-image: url(/asset/images/Marshal.png);
+}
+
+.operator {
+  background-image: url(/asset/images/Operator-shadow.png);
+  transition: 0.4s;
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.operator:hover {
+  background-image: url(/asset/images/Operator.png);
+}
+
+.outlaw {
+  background-image: url(/asset/images/Outlaw-shadow.png);
+  transition: 0.4s;
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.outlaw:hover {
+  background-image: url(/asset/images/Outlaw.png);
+}
+
+/* Shotguns */
+.bucky {
+  background-image: url(../images/Bucky-shadow.png);
+  transition: 0.4s;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.bucky:hover {
+  background-image: url(../images/Bucky.png);
+}
+
+.judge {
+  background-image: url(../images/Judge-shadow.png);
+  transition: 0.4s;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.judge:hover {
+  background-image: url(../images/Judge.webp);
+}
+
+/* Heavy */
+.ares {
+  background-image: url(../images/Ares-shadow.png);
+  transition: 0.4s;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.ares:hover {
+  background-image: url(../images/Ares.png);
+}
+
+.odin {
+  background-image: url(../images/Odin-shadow.png);
+  transition: 0.4s;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.odin:hover {
+  background-image: url(../images/Odin.png);
+}
+
+.weapon img.weapon-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.weapon p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.btn-click {
+  text-decoration: none;
+}
+
+.weapon:hover {
+  background-color: #555;
+}
+
+/* Active Weapon Styling */
+.weapon.active {
+  background-color: #ff4655; /* Valorant red */
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 600px) {
+  .weapons-page {
+    flex-direction: column; /* Stack agent and weapons sections vertically */
+    padding: 20px; /* Reduce padding */
+    justify-content: center;
+    width: auto;
+    height: auto;
+  }
+
+  .agent-info {
+    width: 100%; /* Full width for agent info */
+    margin-bottom: 20px; /* Add some space below */
+    justify-content: center;
+  }
+
+  .weapons-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13vh;
+  }
+
+  .category {
+    padding: 10px; /* Reduce padding */
+    justify-content: center;
+  }
+
+  .weapon {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px; /* Reduce padding */
+    justify-content: center;
+  }
+
+  .agent-name {
+    font-size: 1rem; /* Smaller font size for agent names */
+    justify-content: center;
+  }
+}
+
+.footer {
+  background-color: #222; /* Dark background color for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center-align text */
+}
+
+.footer a {
+  color: #fff; /* White links */
+  margin: 0 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.logo-section {
+  margin-bottom: 20px; /* Space below the logo section */
+}
+
+.footer-logo {
+  max-width: 150px; /* Set a max width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space around the logos */
+}
+
+.social-media {
+  margin-bottom: 20px; /* Space below the social media icons */
+}
+
+.social-icon {
+  max-width: 30px; /* Set a max width for social media icons */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between icons */
+}
+
+.footer-links {
+  margin-bottom: 20px; /* Space below the footer links */
+}
+
+.contact-info {
+  margin-bottom: 20px; /* Space below the contact info */
+}
+
+.policy-links {
+  margin-bottom: 20px; /* Space below the policy links */
+}
+
+.copyright {
+  margin-bottom: 20px; /* Space below the copyright notice */
+}

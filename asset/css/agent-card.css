@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(15, 25, 35) !important;
+}
+
+@font-face {
+  font-family: "DINNextW1G";
+  src: url(../font/DINNextW1G.otf);
+}
+
+@font-face {
+  font-family: larke-neue;
+  src: url(../font/Larke\ Neue\ Bold.ttf);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  width: 30px;
+}
+
+/* play now button */
+.btn-danger {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger a {
+  text-decoration: none;
+  color: white;
+}
+
+/* play now button hover */
+.btn-danger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* buat gap antara nav words */
+.link-container {
+  gap: 2rem;
+  display: flex;
+}
+
+/* Nav link hover efek keren gitu */
+.link-container a {
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease;
+}
+
+.link-container a:hover {
+  color: white;
+}
+
+.link-container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+/* Agent Biodata */
+.agent-card {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: 150%;
+  background-position: center;
+}
+
+.agent-cont {
+  position: relative;
+  width: 43%;
+  height: 500px;
+  justify-content: left;
+  text-align: left;
+  margin-left: 45px;
+  top: 150px;
+}
+
+.agent-cont h1 {
+  display: flex;
+  position: relative;
+  color: rgb(236, 232, 225);
+  font-family: "Anton", sans-serif;
+  font-style: italic;
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+
+.agent-cont p {
+  display: flex;
+  position: relative;
+  text-transform: none;
+  font-family: "DINNextW1G", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.5;
+  color: rgb(236, 232, 225);
+  margin-bottom: 50px;
+}
+
+.outer-bg {
+  display: inline-block;
+  border: 2px solid rgb(255, 70, 85);
+}
+
+.role-bg {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 36, 46);
+  padding: 20px;
+  width: 125px;
+  height: 130px;
+  z-index: 1;
+  border: 8px solid rgb(15, 25, 35);
+}
+
+.role {
+  display: flex;
+  justify-content: center;
+  margin: 0 1000px;
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.role-content h2 {
+  justify-content: center;
+  text-align: center;
+  font-family: "DINNextW1G";
+  font-size: 10px;
+  font-weight: 1;
+  margin-bottom: 5px;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: rgb(236, 232, 225);
+}
+
+.role-content h3 {
+  justify-content: center;
+  text-align: center;
+  font-family: "DINNextW1G";
+  font-size: 10px;
+  font-weight: 11;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: rgb(255, 70, 85);
+}
+
+/* Agent Special Abilities */
+
+.agent-skill {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.special-abilities h2 {
+  display: flex;
+  position: relative;
+  font-size: 48px;
+  justify-content: center;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+  color: rgb(236, 232, 225);
+  justify-content: center;
+  top: 75px;
+  z-index: 100;
+}
+
+.skill {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.skill li {
+  list-style: none;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 30px;
+  opacity: 0.7;
+}
+
+.skill li:hover {
+  opacity: 0.7;
+}
+
+.skill li img {
+  width: 100px;
+  transition: transform 0.6s ease, background-image 0.3s ease;
+}
+
+.skill-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 275px;
+  height: 275px;
+  bottom: 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-front {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 50px;
+  transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+.skill-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.6s ease, opacity 0.2s ease;
+}
+
+.skill-back h2 {
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-family: "DINNextW1G", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: rgb(236, 232, 225);
+}
+
+.skill-back p {
+  text-align: left;
+  display: flex;
+  margin: 0 25px;
+  text-transform: none;
+  font-family: "DINNextW1G", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: rgb(236, 232, 225);
+}
+
+.skill-box:hover .skill-front {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.skill-box:hover .skill-back {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY(0deg);
+}
+
+.skill-box:not(:hover) .skill-front {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.skill-box:not(:hover) .skill-back {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.footer {
+  background-color: #222; /* Dark background color for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center-align text */
+}
+
+.footer a {
+  color: #fff; /* White links */
+  margin: 0 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.logo-section {
+  margin-bottom: 20px; /* Space below the logo section */
+}
+
+.footer-logo {
+  max-width: 150px; /* Set a max width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space around the logos */
+}
+
+.social-media {
+  margin-bottom: 20px; /* Space below the social media icons */
+}
+
+.social-icon {
+  max-width: 30px; /* Set a max width for social media icons */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between icons */
+}
+
+.footer-links {
+  margin-bottom: 20px; /* Space below the footer links */
+}
+
+.contact-info {
+  margin-bottom: 20px; /* Space below the contact info */
+}
+
+.policy-links {
+  margin-bottom: 20px; /* Space below the policy links */
+}
+
+.copyright {
+  margin-bottom: 20px; /* Space below the copyright notice */
+}
+
+@media (max-width: 1280px) {
+  .agent-card {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .agent-skill {
+    width: 100%;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-card {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .agent-cont {
+    top: 25px;
+  }
+
+  .agent-cont h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .agent-cont p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .role-bg {
+    width: 75px;
+    height: 80px;
+  }
+
+  .role {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  .role-content h2 {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+
+  .role-content h3 {
+    font-size: 6px;
+  }
+
+  .agent-skill {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .agent-skill video {
+    width: 400px;
+  }
+
+  .special-abilities h2 {
+    font-size: 32px;
+    top: 60px;
+  }
+
+  .skill-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skill li img {
+    margin-top: -30px;
+    width: 50px;
+  }
+
+  .skill-back p {
+    display: none;
+  }
+
+  .skill-back {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .skill-back h2 {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agent-card {
+    width: 100%;
+    height: 28vh;
+  }
+
+  .agent-cont {
+    top: 10px;
+  }
+
+  .agent-cont h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .agent-cont p {
+    font-size: 8px;
+    margin-bottom: 30px;
+  }
+
+  .role-bg {
+    width: 40px;
+    height: 45px;
+  }
+
+  .role {
+    width: 10px;
+    height: 10px;
+    margin-top: -15px;
+    margin-bottom: 7px;
+  }
+
+  .role-content h2 {
+    font-size: 4px;
+    margin-bottom: 1px;
+  }
+
+  .role-content h3 {
+    font-size: 4px;
+  }
+
+  .agent-skill {
+    width: 100%;
+    height: 28vh;
+  }
+
+  .agent-skill video {
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  .special-abilities h2 {
+    font-size: 16px;
+    top: 30px;
+    left: 3px;
+  }
+
+  .skill-box {
+    width: 75px;
+    height: 75px;
+    margin: 0 -10px;
+  }
+
+  .skill li img {
+    position: relative;
+    top: -40px;
+    bottom: 0;
+    width: 40px;
+  }
+
+  .skill-back p {
+    display: none;
+  }
+
+  .skill-back {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .skill-back h2 {
+    font-size: 8px;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
